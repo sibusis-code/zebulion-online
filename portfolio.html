@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ZebulonOnline | Success Stories & Case Studies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                    <path d="M10 16C10 12.686 12.686 10 16 10C19.314 10 22 12.686 22 16" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="16" cy="16" r="3" fill="currentColor"/>
+                </svg>
+                <span class="logo-text">ZebulonOnline</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" aria-label="TikTok">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" aria-label="WhatsApp">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero Section -->
+    <section class="hero" style="padding-top: 140px; padding-bottom: 80px;">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <h1 class="hero-title">
+                    PROVEN RESULTS ACROSS INDUSTRIES
+                </h1>
+                <p class="hero-text">
+                    See how we've helped businesses like yours build predictable lead generation systems and achieve measurable growth.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Overview Section -->
+    <section class="what-i-do">
+        <div class="container">
+            <div class="services-grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <div style="text-align: center;">
+                    <h3 style="font-size: 3rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 0.5rem;">50+</h3>
+                    <p style="color: var(--gray-400); font-size: 1.125rem;">Campaigns Launched</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="font-size: 3rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 0.5rem;">300%</h3>
+                    <p style="color: var(--gray-400); font-size: 1.125rem;">Average ROI Increase</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="font-size: 3rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 0.5rem;">25+</h3>
+                    <p style="color: var(--gray-400); font-size: 1.125rem;">Clients Served</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="font-size: 3rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 0.5rem;">85%</h3>
+                    <p style="color: var(--gray-400); font-size: 1.125rem;">Client Retention Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="success-stories" style="background: var(--dark-bg);">
+        <div class="container">
+            <span class="section-tag" style="display: block; text-align: center; margin-bottom: 1rem; color: var(--primary-blue);">CASE STUDIES</span>
+            <h2 class="section-title center">Client Success Stories</h2>
+            
+            <!-- Case Study 1: Solar Energy -->
+            <div style="background: var(--card-bg); padding: 3rem; border-radius: 16px; margin-top: 3rem; margin-bottom: 3rem;">
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center;">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&h=400&fit=crop" alt="Solar Energy" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                    </div>
+                    <div>
+                        <span style="background: var(--primary-blue); color: white; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">RENEWABLE ENERGY</span>
+                        <h3 style="font-size: 2rem; font-weight: 700; margin: 1.5rem 0 1rem;">Solar Energy Startup Lands Corporate B2B Partnerships</h3>
+                        <p style="font-size: 1.125rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 2rem;">
+                            A solar energy startup struggled to break into corporate markets. Their outreach was inconsistent, and they lacked a structured approach to identifying and engaging decision-makers.
+                        </p>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem;">
+                            <div>
+                                <h4 style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">245%</h4>
+                                <p style="color: var(--gray-400);">Increase in qualified leads</p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">12</h4>
+                                <p style="color: var(--gray-400);">Corporate partnerships secured</p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">90 days</h4>
+                                <p style="color: var(--gray-400);">Time to first major deal</p>
+                            </div>
+                        </div>
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">What We Did:</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ Developed ICP targeting corporate facilities managers and sustainability officers</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ Created personalized LinkedIn and email outreach campaigns</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ Built automated follow-up sequences with value-driven content</li>
+                            <li style="padding: 0.5rem 0;">✓ Implemented CRM tracking for pipeline visibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2: Catering Business -->
+            <div style="background: var(--card-bg); padding: 3rem; border-radius: 16px; margin-bottom: 3rem;">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: center;">
+                    <div>
+                        <span style="background: var(--primary-blue); color: white; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">FOOD & HOSPITALITY</span>
+                        <h3 style="font-size: 2rem; font-weight: 700; margin: 1.5rem 0 1rem;">Catering Business Secures Daily Customers with Social Media Ads</h3>
+                        <p style="font-size: 1.125rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 2rem;">
+                            A local catering business had great food but struggled with inconsistent customer flow. They needed a system to generate steady daily orders.
+                        </p>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem;">
+                            <div>
+                                <h4 style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">180%</h4>
+                                <p style="color: var(--gray-400);">Revenue growth in 4 months</p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">45+</h4>
+                                <p style="color: var(--gray-400);">Daily orders generated</p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">$12K</h4>
+                                <p style="color: var(--gray-400);">Monthly recurring revenue</p>
+                            </div>
+                        </div>
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">What We Did:</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ Launched targeted Facebook and Instagram ad campaigns</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ Created compelling visual content showcasing menu items</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ Implemented order tracking and customer retargeting</li>
+                            <li style="padding: 0.5rem 0;">✓ Built email list for repeat customer nurturing</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="images/BAKERY.jpg" alt="Catering Business" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 3: Paralegal Service -->
+            <div style="background: var(--card-bg); padding: 3rem; border-radius: 16px; margin-bottom: 3rem;">
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center;">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=400&fit=crop" alt="Paralegal Service" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                    </div>
+                    <div>
+                        <span style="background: var(--primary-blue); color: white; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">PROFESSIONAL SERVICES</span>
+                        <h3 style="font-size: 2rem; font-weight: 700; margin: 1.5rem 0 1rem;">Paralegal Service Establishes Steady Monthly Revenue via Email Marketing</h3>
+                        <p style="font-size: 1.125rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 2rem;">
+                            A paralegal service had a small client base but no system for consistent lead generation. They relied entirely on referrals and word-of-mouth.
+                        </p>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem;">
+                            <div>
+                                <h4 style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">320%</h4>
+                                <p style="color: var(--gray-400);">Increase in monthly clients</p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">$28K</h4>
+                                <p style="color: var(--gray-400);">Monthly recurring revenue</p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">65%</h4>
+                                <p style="color: var(--gray-400);">Email open rate</p>
+                            </div>
+                        </div>
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">What We Did:</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ Built email list targeting small business owners and entrepreneurs</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ Created educational email campaign on legal compliance</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ Developed lead magnet offering free legal checklist</li>
+                            <li style="padding: 0.5rem 0;">✓ Implemented automated nurture sequence converting leads to clients</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="what-i-do">
+        <div class="container">
+            <span class="section-tag" style="display: block; text-align: center; margin-bottom: 1rem;">TESTIMONIALS</span>
+            <h2 class="section-title center">What Our Clients Say</h2>
+            <div class="stories-grid" style="margin-top: 3rem;">
+                <div style="background: var(--card-bg); padding: 2.5rem; border-radius: 16px;">
+                    <div style="color: var(--primary-blue); font-size: 3rem; margin-bottom: 1rem;">"</div>
+                    <p style="font-size: 1.125rem; line-height: 1.7; margin-bottom: 2rem; color: var(--gray-400);">
+                        "Working with Zebulon transformed our sales pipeline. We went from chasing leads to having qualified prospects reaching out to us. The ROI has been incredible."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;">JD</div>
+                        <div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.25rem;">John Davis</h4>
+                            <p style="color: var(--gray-400); font-size: 0.875rem;">CEO, Solar Solutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: var(--card-bg); padding: 2.5rem; border-radius: 16px;">
+                    <div style="color: var(--primary-blue); font-size: 3rem; margin-bottom: 1rem;">"</div>
+                    <p style="font-size: 1.125rem; line-height: 1.7; margin-bottom: 2rem; color: var(--gray-400);">
+                        "The social media campaigns delivered exactly what we needed—consistent daily orders. Our business is now predictable and profitable."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;">MT</div>
+                        <div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Maria Thompson</h4>
+                            <p style="color: var(--gray-400); font-size: 0.875rem;">Owner, Gourmet Catering Co.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: var(--card-bg); padding: 2.5rem; border-radius: 16px;">
+                    <div style="color: var(--primary-blue); font-size: 3rem; margin-bottom: 1rem;">"</div>
+                    <p style="font-size: 1.125rem; line-height: 1.7; margin-bottom: 2rem; color: var(--gray-400);">
+                        "Zebulon's email marketing strategy brought us steady clients month after month. We've finally broken free from the referral-only model."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;">RB</div>
+                        <div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Robert Brown</h4>
+                            <p style="color: var(--gray-400); font-size: 0.875rem;">Founder, Legal Support Services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Served Section -->
+    <section class="success-stories" style="background: var(--dark-bg);">
+        <div class="container">
+            <span class="section-tag" style="display: block; text-align: center; margin-bottom: 1rem; color: var(--primary-blue);">INDUSTRIES WE SERVE</span>
+            <h2 class="section-title center">Diverse Industry Expertise</h2>
+            <div class="services-grid" style="margin-top: 3rem;">
+                <div class="service-card">
+                    <span class="service-number">🏭</span>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Manufacturing</h3>
+                    <p>Industrial equipment, machinery, components, and supply chain solutions</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-number">⚡</span>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Energy & Utilities</h3>
+                    <p>Solar, renewable energy, and environmental solutions</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-number">💼</span>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Professional Services</h3>
+                    <p>Legal, consulting, accounting, and business services</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-number">🍽️</span>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Food & Hospitality</h3>
+                    <p>Catering, restaurants, and hospitality services</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-number">💻</span>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Technology & SaaS</h3>
+                    <p>Software, IT services, and tech solutions</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-number">🏗️</span>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Construction</h3>
+                    <p>Contractors, builders, and construction services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="services-cta">
+        <div class="container">
+            <span class="section-tag">YOUR SUCCESS STORY STARTS HERE</span>
+            <h2 class="section-title">Ready to Achieve<br>Similar Results?</h2>
+            <p style="font-size: 1.25rem; color: var(--gray-400); max-width: 800px; margin: 2rem auto;">
+                Let's build a customized lead generation system that delivers measurable results for your business.
+            </p>
+            <a href="contact.html" class="btn btn-outline">START YOUR SUCCESS STORY</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">ZebulonOnline</h3>
+                    <p class="footer-tagline">Craft your ideas into long lasting solutions</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Website</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Blog</h4>
+                    <ul>
+                        <li><a href="blog.html">How to Accelerate B2B Lead Generation and Client Acquisition for Scalable Growth</a></li>
+                    </ul>
+                </div>
+                <div class="footer-cta">
+                    <h4>CREATE SOMETHING TRULY STUNNING THE EASY WAY.</h4>
+                    <a href="contact.html" class="btn btn-outline-light">GET STARTED</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 ZebulonOnline</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="X">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-credit">
+                <p>Designed by <a href="https://www.mplai.co.za" target="_blank">MPL AI</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

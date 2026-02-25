@@ -251,5 +251,79 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', debounce(highlightNavLink, 10));
     window.addEventListener('scroll', debounce(revealOnScroll, 50));
     
+    // ============================================
+    // PAGE TRANSITIONS
+    // ============================================
+    
+    // Add page transition styles
+    const transitionStyle = document.createElement('style');
+    transitionStyle.textContent = `
+        body {
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        body.page-loaded {
+            opacity: 1;
+        }
+        
+        body.page-transitioning {
+            opacity: 0;
+        }
+    `;
+    document.head.appendChild(transitionStyle);
+    
+    // Fade in current page
+    setTimeout(() => {
+        document.body.classList.add('page-loaded');
+    }, 50);
+    
+    // Smooth page transitions on navigation
+    const links = document.querySelectorAll('a[href*=".html"], a[href="index.html"]');
+    
+    links.forEach(link => {
+        // Skip external links and hash links
+        if (link.hostname !== window.location.hostname || link.getAttribute('href').startsWith('#')) {
+            return;
+        }
+        
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Don't prevent default for external or hash links
+            if (!href || href.startsWith('#') || this.target === '_blank') {
+                return;
+            }
+            
+            // Check if it's the current page
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const targetPage = href.split('/').pop();
+            
+            if (currentPage === targetPage) {
+                return;
+            }
+            
+            e.preventDefault();
+            
+            // Add transition class
+            document.body.classList.add('page-transitioning');
+            document.body.classList.remove('page-loaded');
+            
+            // Navigate after animation
+            setTimeout(() => {
+                window.location.href = href;
+            }, 300);
+        });
+    });
+    
+    // Handle browser back/forward buttons
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            // Page is loaded from cache
+            document.body.classList.remove('page-transitioning');
+            document.body.classList.add('page-loaded');
+        }
+    });
+    
     console.log('🚀 Zebulon Online - B2B Lead Generation Specialist - Website Loaded Successfully!');
 });

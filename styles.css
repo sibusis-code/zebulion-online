@@ -37,6 +37,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    /* Fix for viewport height on mobile browsers */
+    height: -webkit-fill-available;
 }
 
 body {
@@ -45,6 +47,12 @@ body {
     color: var(--white);
     background: var(--white);
     overflow-x: hidden;
+    /* Better text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Fix for viewport height on mobile browsers */
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 /* Custom Scrollbar */
@@ -79,6 +87,9 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    /* Better image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 button {
@@ -86,6 +97,9 @@ button {
     border: none;
     background: none;
     font-family: inherit;
+    /* Better touch targets on mobile */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 /* Focus states for accessibility */
@@ -246,6 +260,12 @@ button:focus-visible {
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-md);
+    /* Better touch targets */
+    min-height: 44px;
+    min-width: 44px;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .btn-primary {
@@ -1012,6 +1032,9 @@ button:focus-visible {
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+/* ============================================
+   RESPONSIVE DESIGN - TABLET & SMALL DESKTOP
+   ============================================ */
 @media (max-width: 1024px) {
     .hero-grid {
         grid-template-columns: 1fr;
@@ -1046,8 +1069,41 @@ button:focus-visible {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    /* Blog Magazine Layout - Stack on Tablet */
+    article div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    article div[style*="height: 400px"] {
+        height: 300px !important;
+    }
+    
+    /* Portfolio Page - Adjust grids */
+    div[style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    div[style*="grid-template-columns: 1fr 2fr"],
+    div[style*="grid-template-columns: 2fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    /* Contact Page - Stack FAQ and Form */
+    section div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
 }
 
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
 @media (max-width: 768px) {
     .nav-links,
     .social-icons {
@@ -1083,9 +1139,63 @@ button:focus-visible {
         bottom: 0;
         border-radius: 0 0 1rem 1rem;
     }
+    
+    /* Blog Article - Mobile Typography */
+    article h1[style*="font-size: 3rem"] {
+        font-size: 2rem !important;
+    }
+    
+    article h2[style*="font-size: 2rem"],
+    article h2[style*="font-size: 2.5rem"] {
+        font-size: 1.5rem !important;
+    }
+    
+    article p[style*="font-size: 1.125rem"],
+    article p[style*="font-size: 1.25rem"] {
+        font-size: 1rem !important;
+    }
+    
+    article div[style*="padding: 4rem 3rem"] {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    article div[style*="height: 400px"],
+    article div[style*="height: 500px"] {
+        height: 250px !important;
+    }
+    
+    /* Magazine Grid - Stack on Mobile */
+    article div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Portfolio Page - Mobile */
+    div[style*="grid-template-columns: repeat(4, 1fr)"],
+    div[style*="grid-template-columns: repeat(3, 1fr)"],
+    div[style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Contact Page - Mobile */
+    section div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Team Section - About Page */
+    .team-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
 
+/* ============================================
+   RESPONSIVE DESIGN - SMALL MOBILE
+   ============================================ */
 @media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+    
     .container {
         padding: 0 1rem;
     }
@@ -1103,6 +1213,60 @@ button:focus-visible {
     .services-cta,
     .ready-to-start {
         padding: 3rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    
+    .btn {
+        padding: 0.875rem 2rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Blog Article - Extra Small Screens */
+    article h1[style*="font-size"] {
+        font-size: 1.75rem !important;
+    }
+    
+    article h2[style*="font-size"] {
+        font-size: 1.25rem !important;
+    }
+    
+    article span[style*="font-size: 0.875rem"],
+    article span[style*="font-size: 0.75rem"] {
+        font-size: 0.75rem !important;
+        padding: 0.375rem 0.75rem !important;
+    }
+    
+    article div[style*="padding"] {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    article div[style*="height"] {
+        height: 200px !important;
+    }
+    
+    article ul li {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Form inputs - Better touch targets */
+    input, textarea, select {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        padding: 0.875rem !important;
+    }
+    
+    /* Profile cards - About page */
+    .profile-card img {
+        width: 250px !important;
+        height: 250px !important;
+    }
+    
+    /* CTA sections */
+    .services-cta,
+    .ready-to-start {
+        padding: 2rem 0 !important;
     }
 }
 
@@ -1173,3 +1337,41 @@ button:focus-visible {
 .story-card:nth-child(1) { transition-delay: 0.1s; }
 .story-card:nth-child(2) { transition-delay: 0.2s; }
 .story-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Responsive Utilities */
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+    
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+/* Loading States */
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Smooth Transitions for all interactive elements */
+a, button, input, textarea, select {
+    -webkit-tap-highlight-color: rgba(0, 0, 255, 0.1);
+    touch-action: manipulation;
+}
+
+/* Better focus for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
