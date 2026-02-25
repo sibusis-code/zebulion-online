@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 mobileMenu.className = 'mobile-menu';
                 mobileMenu.innerHTML = `
                     <ul>
-                        <li><a href="#home">HOME</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#services">SERVICE</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                        <li><a href="#blog">BLOG</a></li>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="services.html">SERVICE</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
                     </ul>
                 `;
                 

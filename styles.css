@@ -266,6 +266,7 @@ button:focus-visible {
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     touch-action: manipulation;
+    z-index: 5;
 }
 
 .btn-primary {
@@ -367,6 +368,8 @@ button:focus-visible {
     grid-template-columns: 1.2fr 1fr;
     gap: 4rem;
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-title {
@@ -1186,6 +1189,26 @@ button:focus-visible {
     .team-grid {
         grid-template-columns: 1fr !important;
     }
+    
+    /* Fix curved line overlap on mobile */
+    .what-i-do::before {
+        top: -20px !important;
+        height: 40px !important;
+    }
+    
+    .hero {
+        padding: 6rem 0 4rem !important;
+    }
+    
+    /* Ensure buttons have proper spacing on mobile */
+    .btn-primary,
+    .btn-outline-light {
+        margin-bottom: 2rem;
+    }
+    
+    .hero .btn {
+        margin-bottom: 3rem;
+    }
 }
 
 /* ============================================
@@ -1205,14 +1228,31 @@ button:focus-visible {
     }
     
     .hero {
-        padding: 6rem 0 3rem;
+        padding: 6rem 0 5rem !important;
     }
     
     .what-i-do,
     .success-stories,
     .services-cta,
     .ready-to-start {
-        padding: 3rem 0;
+        padding: 2.5rem 0;
+    }
+    
+    /* Further reduce curved line on small mobile */
+    .what-i-do::before {
+        top: -15px !important;
+        height: 30px !important;
+    }
+    
+    /* Extra spacing for hero buttons on small screens */
+    .hero .btn {
+        margin-bottom: 4rem !important;
+    }
+    
+    /* Ensure all sections have proper separation */
+    section {
+        position: relative;
+        clear: both;
     }
     
     .hero-title {
